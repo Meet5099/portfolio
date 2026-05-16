@@ -1,0 +1,27 @@
+{
+  "name": "meet-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio website for Meet Patel - CS Engineer",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Meet5099/portfolio.git"
+  },
+  "keywords": [
+    "portfolio",
+    "vercel",
+    "speed-insights"
+  ],
+  "author": "Meet Patel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Meet5099/portfolio/issues"
+  },
+  "homepage": "https://github.com/Meet5099/portfolio#readme",
+  "dependencies": {
+    "@vercel/speed-insights": "^2.0.0"
+  }
+}
