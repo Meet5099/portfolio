@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meet Patel — CS Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,300;0,400;0,500;0,700;0,800;0,900;1,400;1,700&family=Barlow:wght@300;400;500;600&family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- PAGE LOADER -->
+<div id="loader">
+  <div class="loader-logo">Meet <span>Patel</span></div>
+  <div class="loader-bar"><div class="loader-bar-fill" id="loader-fill"></div></div>
+  <div class="loader-text" id="loader-text">Initialising…</div>
+</div>
+
+<div id="cur"></div>
+<div id="cur-ring"></div>
+<div id="progress-bar"></div>
+<canvas id="particle-canvas"></canvas>
+
+<!-- RESUME FAB -->
+<a href="https://drive.google.com/file/d/1-7QZe1SzULqCiPMRivHH3PZjTfs0XVDN/view?usp=drive_link"
+   class="resume-fab" id="resume-fab" target="_blank" rel="noopener">
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+    <polyline points="7 10 12 15 17 10"/>
+    <line x1="12" y1="15" x2="12" y2="3"/>
+  </svg>
+  Resume
+</a>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <a href="#hero" class="nav-logo">Meet <span>Patel</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#certs">Certs</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-actions">
+    <a href="https://drive.google.com/file/d/1-7QZe1SzULqCiPMRivHH3PZjTfs0XVDN/view?usp=drive_link"
+       class="resume-btn" target="_blank" rel="noopener">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+        <polyline points="7 10 12 15 17 10"/>
+        <line x1="12" y1="15" x2="12" y2="3"/>
+      </svg>
+      <span>Resume</span>
+    </a>
+    <a href="mailto:meetpatel1465@gmail.com" class="nav-hire">Hire Me →</a>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section id="hero">
+  <div class="hero-mesh"></div>
+  <div class="hero-dots"></div>
+  <div class="hero-stripes"></div>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+  <div class="orb orb-4"></div>
+
+  <!-- Animated SVG background art -->
+  <svg class="hero-svg-bg" viewBox="0 0 600 800" xmlns="http://www.w3.org/2000/svg" fill="none">
+    <circle cx="300" cy="300" r="220" stroke="#25343F" stroke-width="1"/>
+    <circle cx="300" cy="300" r="160" stroke="#FF9B51" stroke-width=".5" stroke-dasharray="8 6"/>
+    <circle cx="300" cy="300" r="100" stroke="#25343F" stroke-width=".5"/>
+    <line x1="80" y1="300" x2="520" y2="300" stroke="#25343F" stroke-width=".5"/>
+    <line x1="300" y1="80" x2="300" y2="520" stroke="#25343F" stroke-width=".5"/>
+    <line x1="144" y1="144" x2="456" y2="456" stroke="#FF9B51" stroke-width=".4" stroke-dasharray="6 8"/>
+    <line x1="456" y1="144" x2="144" y2="456" stroke="#FF9B51" stroke-width=".4" stroke-dasharray="6 8"/>
+    <circle cx="300" cy="80" r="5" fill="#FF9B51"/>
+    <circle cx="520" cy="300" r="5" fill="#3a7fc0"/>
+    <circle cx="300" cy="520" r="5" fill="#2a8a8a"/>
+    <circle cx="80" cy="300" r="5" fill="#FF9B51"/>
+    <polygon points="300,120 380,280 220,280" stroke="#25343F" stroke-width=".6" fill="none"/>
+  </svg>
+
+  <!-- Geometric decorators -->
+  <div class="geo geo-ring-1">
+    <div class="orbit-dot"></div>
+    <div class="orbit-dot2"></div>
+  </div>
+  <div class="geo geo-ring-2"></div>
+  <div class="geo geo-cross"></div>
+
+  <div class="hero-left">
+    <div class="hero-tag"><span class="hero-tag-dot"></span>CS Engineer · Open to Work</div>
+    <div class="hero-name">
+      Meet
+      <em>Patel</em>
+    </div>
+    <div class="hero-role">
+      <div class="hero-role-line"></div>
+      <span class="hero-role-text"><span id="typed-role"></span></span>
+    </div>
+    <p class="hero-desc">Results-driven B.Tech CSE student at CHARUSAT–CSPIT. Full-stack developer with live production deployments and hands-on AI/ML experience. Building cross-platform systems that actually ship.</p>
+    <div class="hero-chips">
+      <a href="tel:+917984939677" class="chip">📞 +91 79849 39677</a>
+      <a href="mailto:meetpatel1465@gmail.com" class="chip">✉ meetpatel1465@gmail.com</a>
+      <a href="#" class="chip">📍 Navsari, Gujarat</a>
+    </div>
+    <div class="hero-ctas">
+      <a href="#projects" class="btn-fill"><span>View Projects →</span></a>
+      <a href="#contact" class="btn-line">Get in Touch</a>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="info-card">
+      <div class="info-header">
+        <div class="avatar">MP</div>
+        <div class="info-name">Meet Patel</div>
+        <div class="info-role-tag">Computer Science Engineer</div>
+      </div>
+      <div class="info-body">
+        <div class="info-row"><span class="info-key">University</span><span class="info-val">CHARUSAT – CSPIT</span></div>
+        <div class="info-row"><span class="info-key">Degree</span><span class="info-val">B.Tech CSE · 2023–Present</span></div>
+        <div class="info-row"><span class="info-key">CGPA</span><span class="info-val gold">6.36 / 10 (Sem 5)</span></div>
+        <div class="info-row"><span class="info-key">Status</span><span class="info-val green">● Open to Work</span></div>
+        <div class="info-row"><span class="info-key">Location</span><span class="info-val">Navsari, Gujarat</span></div>
+        <div class="info-row">
+          <span class="info-key">Stack</span>
+          <div class="stack-pills">
+            <span class="spill">MERN</span><span class="spill">Python</span><span class="spill">Flask</span><span class="spill">PHP</span><span class="spill">AI/ML</span>
+          </div>
+        </div>
+      </div>
+      <div class="info-footer">
+        <div class="ifdot"></div>
+        <span class="iftext">Available for internships &amp; full-time roles</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Wave between hero and about -->
+<div class="wave-sep" style="background:#eaefef;">
+  <svg viewBox="0 0 1200 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,40 C150,80 350,0 600,40 C850,80 1050,0 1200,40 L1200,80 L0,80 Z" fill="#EAEFEF"/>
+  </svg>
+</div>
+
+<!-- ═══ ABOUT ═══ -->
+<section id="about">
+  <div class="sec-label reveal">01 · About</div>
+  <h2 class="sec-title reveal">Who I <em>Am</em></h2>
+  <div class="about-layout">
+    <div class="about-text reveal">
+      <p>Results-driven Computer Science &amp; Engineering student at <strong>CHARUSAT–CSPIT</strong> with proven full-stack development experience across multiple internships and a live production deployment.</p>
+      <p>Skilled at crafting responsive, cross-platform UIs with a strong foundation in backend development, database management, and AI-powered systems. I build things end-to-end — from database schema to polished UI — and I ship them.</p>
+      <p>Eager to bring hands-on project experience to frontend development for cloud-based AI applications and contribute to teams that move fast and build with purpose.</p>
+      <div class="about-meta">
+        <div class="meta-item"><div class="meta-label">University</div><div class="meta-val">CHARUSAT – CSPIT</div></div>
+        <div class="meta-item"><div class="meta-label">Degree</div><div class="meta-val">B.Tech CSE · 2023–Present</div></div>
+        <div class="meta-item"><div class="meta-label">Location</div><div class="meta-val">Navsari, Gujarat</div></div>
+        <div class="meta-item"><div class="meta-label">Status</div><div class="meta-val accent">● Open to Work</div></div>
+        <div class="meta-item"><div class="meta-label">Email</div><div class="meta-val">meetpatel1465@gmail.com</div></div>
+        <div class="meta-item"><div class="meta-label">Phone</div><div class="meta-val">+91 79849 39677</div></div>
+      </div>
+    </div>
+    <div class="stats-col reveal-right">
+      <div class="stat-card"><div class="stat-num" data-count="3">0</div><div class="stat-desc">Certifications Earned</div></div>
+      <div class="stat-card"><div class="stat-num" data-count="3">0</div><div class="stat-desc">Production Projects</div></div>
+      <div class="stat-card"><div class="stat-num" data-count="56">0</div><div class="stat-desc">HSC Percentage (%)</div></div>
+      <div class="stat-card"><div class="stat-num" data-count="1">0</div><div class="stat-desc">Internship Completed</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SKILLS ═══ -->
+<section id="skills">
+  <div class="sec-label reveal">02 · Skills</div>
+  <h2 class="sec-title reveal">Tech <em>Stack</em></h2>
+  <div class="skills-grid reveal">
+    <div class="skill-group">
+      <div class="skill-group-label">Languages</div>
+      <div class="skill-tags"><span class="skill-tag">JavaScript</span><span class="skill-tag">Python</span><span class="skill-tag">PHP</span><span class="skill-tag">Java</span><span class="skill-tag">C</span><span class="skill-tag">C++</span></div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-label">Frontend</div>
+      <div class="skill-tags"><span class="skill-tag">React.js</span><span class="skill-tag">HTML5</span><span class="skill-tag">CSS3</span><span class="skill-tag">Responsive Design</span><span class="skill-tag">Vite</span></div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-label">Backend</div>
+      <div class="skill-tags"><span class="skill-tag">Node.js</span><span class="skill-tag">Express.js</span><span class="skill-tag">Flask</span><span class="skill-tag">RESTful APIs</span><span class="skill-tag">JWT Auth</span></div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-label">Databases</div>
+      <div class="skill-tags"><span class="skill-tag">MySQL</span><span class="skill-tag">MongoDB</span><span class="skill-tag">CRUD Ops</span><span class="skill-tag">Query Optimization</span><span class="skill-tag">Schema Design</span></div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-label">AI / ML</div>
+      <div class="skill-tags"><span class="skill-tag">AI Integration</span><span class="skill-tag">ML Concepts</span><span class="skill-tag">AI-Powered Systems</span><span class="skill-tag">Generative AI</span></div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-label">Cloud & DevOps</div>
+      <div class="skill-tags"><span class="skill-tag">AWS</span><span class="skill-tag">Azure</span><span class="skill-tag">Git & GitHub</span><span class="skill-tag">CI/CD</span><span class="skill-tag">Azure DevOps</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ EXPERIENCE ═══ -->
+<section id="experience">
+  <div class="sec-label reveal">03 · Experience</div>
+  <h2 class="sec-title reveal">Work <em>History</em></h2>
+  <div class="exp-wrapper">
+    <div class="exp-sidebar reveal-left">
+      <p class="exp-sidebar-title">Building real products at real companies since 2025.</p>
+    </div>
+    <div class="exp-timeline">
+      <div class="exp-item reveal">
+        <div class="exp-dot"></div>
+        <div class="exp-period">
+          <span class="exp-badge">May 2025 – Jun 2025</span>
+          Navsari, Gujarat
+        </div>
+        <div class="exp-card">
+          <div class="exp-role">Web Development Intern</div>
+          <div class="exp-company">Izonnet Web Solution Pvt. Ltd.</div>
+          <ul class="exp-bullets">
+            <li>Built full-stack web applications using MongoDB, Express.js, React.js, and Node.js with responsive UI and RESTful API integration.</li>
+            <li>Developed secure authentication and authorization using JWT, role-based access control, protected routes, and state management for seamless UX.</li>
+            <li>Managed MongoDB databases with CRUD operations, schema design, API optimization, and efficient backend data handling.</li>
+            <li>Integrated frontend and backend modules for real-time data flow, dashboard management, and dynamic content rendering.</li>
+            <li><strong style="color:var(--ink);font-weight:600;">Project — Paw Finds:</strong> MERN-based pet adoption platform featuring user and admin dashboards, pet listing, adoption management, secure login/registration, and approval workflows.</li>
+          </ul>
+          <div class="exp-tech">
+            <span>MongoDB</span><span>Express.js</span><span>React.js</span><span>Node.js</span><span>JWT</span><span>RBAC</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PROJECTS ═══ -->
+<section id="projects">
+  <div class="sec-label reveal">04 · Projects</div>
+  <h2 class="sec-title reveal">What I've <em>Built</em></h2>
+  <div class="projects-layout">
+    <div class="proj-card featured reveal">
+      <div>
+        <div class="proj-number">PROJECT_01 · FEATURED · ACTIVE</div>
+        <div class="proj-title">CiviCare — Smart Municipal Governance System</div>
+        <div class="proj-pill active"><span class="pdot"></span>In Development · Jan 2026–Present</div>
+        <p class="proj-desc">AI-powered civic complaint portal built with React.js (Vite), Flask, and MongoDB. Features an AI Impact Analysis engine that auto-categorises reports, assesses risk scores, and predicts resolution timelines — core logic written in Python. Smart Team Builder with proximity/expertise matching, gamification (XP, leaderboards), email verification, and automated scripts.</p>
+        <div class="proj-tags"><span class="proj-tag">React.js (Vite)</span><span class="proj-tag">Flask</span><span class="proj-tag">MongoDB</span><span class="proj-tag">Python</span><span class="proj-tag">AI/ML</span><span class="proj-tag">Gamification</span></div>
+        <div class="proj-links"><a href="#" class="proj-link">↗ Live Demo</a><a href="#" class="proj-link">⌥ GitHub</a></div>
+      </div>
+      <div class="proj-num-big">01</div>
+    </div>
+    <div class="proj-card reveal">
+      <div>
+        <div class="proj-number">PROJECT_02</div>
+        <div class="proj-title">Krishna Car Parts</div>
+        <div class="proj-pill live"><span class="pdot"></span>Live Client · Jun–Sep 2025</div>
+        <p class="proj-desc">Full-featured automotive e-commerce platform built with PHP/MySQL. Customer-facing product browsing, cart, and checkout plus an admin dashboard for product, order, and inventory management. Role-based access control, secure session handling, real-time cart updates, and optimised database queries.</p>
+        <div class="proj-tags"><span class="proj-tag">PHP</span><span class="proj-tag">MySQL</span><span class="proj-tag">RBAC</span><span class="proj-tag">E-Commerce</span></div>
+        <div class="proj-links"><a href="#" class="proj-link">⌥ GitHub</a></div>
+      </div>
+      <div class="proj-num-big">02</div>
+    </div>
+    <div class="proj-card reveal">
+      <div>
+        <div class="proj-number">PROJECT_03</div>
+        <div class="proj-title">Paw Finds</div>
+        <div class="proj-pill deployed"><span class="pdot"></span>Deployed · Internship Project</div>
+        <p class="proj-desc">MERN-based pet adoption platform featuring user and admin dashboards, pet listing and adoption management, secure login/registration, approval workflows, and functionality for users to submit pets for adoption.</p>
+        <div class="proj-tags"><span class="proj-tag">MongoDB</span><span class="proj-tag">Express.js</span><span class="proj-tag">React.js</span><span class="proj-tag">Node.js</span><span class="proj-tag">JWT</span></div>
+        <div class="proj-links"><a href="#" class="proj-link">⌥ GitHub</a></div>
+      </div>
+      <div class="proj-num-big">03</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ EDUCATION ═══ -->
+<section id="education">
+  <div class="sec-label reveal">05 · Education</div>
+  <h2 class="sec-title reveal">Academic <em>Background</em></h2>
+  <div class="edu-grid">
+    <div class="edu-card reveal">
+      <div class="edu-degree">B.Tech — Computer Science &amp; Engineering</div>
+      <div class="edu-inst">CHARUSAT University – CSPIT</div>
+      <div class="edu-loc">Changa, Gujarat · 2023 – Present</div>
+      <span class="edu-score">CGPA: 6.36 / 10 (Sem 5)</span>
+    </div>
+    <div class="edu-card reveal">
+      <div class="edu-degree">Higher Secondary — GSEB (PCM)</div>
+      <div class="edu-inst">AB. School</div>
+      <div class="edu-loc">Navsari, Gujarat · 2021 – 2023</div>
+      <span class="edu-score">Percentage: 56%</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CERTIFICATIONS ═══ -->
+<section id="certs">
+  <div class="sec-label reveal">06 · Certifications</div>
+  <h2 class="sec-title reveal">Certified <em>Skills</em></h2>
+  <p class="certs-hint reveal">Hover over any card to preview · Click to view certificate</p>
+  <div class="certs-grid">
+
+    <div class="cert-card reveal" onclick="window.open('https://coursera.org/share/af91e48f0588ce4e482abdf1c6e85e3d','_blank')">
+      <div class="cert-icon">🚀</div>
+      <div>
+        <div class="cert-title">Introduction to DevOps, Cloud Computing &amp; Agile Development</div>
+        <div class="cert-issuer">IBM · Coursera</div>
+        <div class="cert-date">March 2026</div>
+      </div>
+      <div class="cert-preview">
+        <div class="cert-preview-img">
+          <div class="cert-badge">🚀</div>
+          <div class="cert-preview-label">IBM · Coursera</div>
+        </div>
+        <div class="cert-preview-body">
+          <div class="cert-preview-title">DevOps, Cloud Computing &amp; Agile Development</div>
+          <div class="cert-preview-meta">
+            <span class="cert-preview-issuer">March 2026</span>
+            <span class="cert-verify-badge">✓ Verified</span>
+          </div>
+          <div class="cert-actions">
+            <a href="https://coursera.org/share/af91e48f0588ce4e482abdf1c6e85e3d" target="_blank" class="cert-action-btn" onclick="event.stopPropagation()">↗ View Certificate</a>
+          </div>
+        </div>
+        <div class="cert-preview-arrow"></div>
+      </div>
+    </div>
+
+    <div class="cert-card reveal" onclick="window.open('https://coursera.org/share/353337226528f7635024926e7b3e8cc4','_blank')">
+      <div class="cert-icon">⚛️</div>
+      <div>
+        <div class="cert-title">MERN Stack — Full Stack React, Redux &amp; Node.js</div>
+        <div class="cert-issuer">Coursera</div>
+        <div class="cert-date">August 2025</div>
+      </div>
+      <div class="cert-preview">
+        <div class="cert-preview-img">
+          <div class="cert-badge">⚛️</div>
+          <div class="cert-preview-label">Coursera</div>
+        </div>
+        <div class="cert-preview-body">
+          <div class="cert-preview-title">MERN Stack — Full Stack React, Redux &amp; Node.js</div>
+          <div class="cert-preview-meta">
+            <span class="cert-preview-issuer">August 2025</span>
+            <span class="cert-verify-badge">✓ Verified</span>
+          </div>
+          <div class="cert-actions">
+            <a href="https://coursera.org/share/353337226528f7635024926e7b3e8cc4" target="_blank" class="cert-action-btn" onclick="event.stopPropagation()">↗ View Certificate</a>
+          </div>
+        </div>
+        <div class="cert-preview-arrow"></div>
+      </div>
+    </div>
+
+    <div class="cert-card reveal" onclick="window.open('https://coursera.org/share/5c5e8c1b5f475addc85f5af5a22a067f','_blank')">
+      <div class="cert-icon">🔐</div>
+      <div>
+        <div class="cert-title">Cybersecurity Fundamentals</div>
+        <div class="cert-issuer">Coursera</div>
+        <div class="cert-date">2025</div>
+      </div>
+      <div class="cert-preview">
+        <div class="cert-preview-img">
+          <div class="cert-badge">🔐</div>
+          <div class="cert-preview-label">Coursera</div>
+        </div>
+        <div class="cert-preview-body">
+          <div class="cert-preview-title">Cybersecurity Fundamentals</div>
+          <div class="cert-preview-meta">
+            <span class="cert-preview-issuer">2025</span>
+            <span class="cert-verify-badge">✓ Verified</span>
+          </div>
+          <div class="cert-actions">
+            <a href="https://coursera.org/share/5c5e8c1b5f475addc85f5af5a22a067f" target="_blank" class="cert-action-btn" onclick="event.stopPropagation()">↗ View Certificate</a>
+          </div>
+        </div>
+        <div class="cert-preview-arrow"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ CONTACT ═══ -->
+<section id="contact">
+  <div class="contact-mesh"></div>
+  <div class="contact-bg"></div>
+  <div class="contact-glow"></div>
+  <div class="contact-glow2"></div>
+  <div class="contact-inner">
+    <div class="contact-tag reveal"><span class="contact-tagdot"></span> Available Now</div>
+    <div class="contact-headline reveal">Let's<br><em>Connect</em></div>
+    <p class="contact-sub reveal">Open to internships, full-time roles, freelance projects, and tech collabs. My inbox is always open.</p>
+    <div class="contact-links reveal">
+      <a href="mailto:meetpatel1465@gmail.com" class="contact-link">✉ meetpatel1465@gmail.com</a>
+      <a href="tel:+917984939677" class="contact-link">📞 +91 79849 39677</a>
+      <a href="#" class="contact-link" target="_blank">💼 LinkedIn</a>
+      <a href="#" class="contact-link" target="_blank">⌥ GitHub</a>
+      <a href="https://drive.google.com/file/d/1-7QZe1SzULqCiPMRivHH3PZjTfs0XVDN/view?usp=drive_link" class="contact-link" target="_blank">↓ Resume</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="foot-logo">Meet Patel</span>
+  <span class="foot-copy">© 2025 · Crafted with precision · Navsari, Gujarat</span>
+</footer>
+
+<script src="script.js"></script>
+</html>
